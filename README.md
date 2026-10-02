@@ -16,6 +16,10 @@ Personal config for zsh/oh-my-zsh, git, tmux, kitty, nvim, Claude Code.
 | `claude/CLAUDE.md`       | `~/.claude/CLAUDE.md`          |
 | `claude/RTK.md`          | `~/.claude/RTK.md`             |
 | `claude/statusline.sh`   | `~/.claude/statusline.sh`      |
+| `vscode/settings.json`   | VSCode User `settings.json`    |
+| `vscode/keybindings.json`| VSCode User `keybindings.json` |
+| `vscode/snippets`        | VSCode User `snippets/`        |
+| `vscode/extensions.txt`  | installed via `code --install-extension` |
 
 ## Install on a new machine
 
@@ -32,6 +36,19 @@ cd ~/dotfiles
 - creates `~/.zsh_secrets` from the example template if missing
 
 Safe to re-run; already-correct symlinks are left alone.
+
+### VSCode only
+
+`install.sh` already calls it, but it also runs standalone if you only want
+VSCode settings/snippets/extensions on a machine (no shell/git/nvim changes):
+
+```sh
+./install-vscode.sh
+```
+
+Needs the `code` CLI on PATH (VSCode: Cmd+Shift+P > "Shell Command: Install
+'code' command in PATH") to install extensions; settings/snippets/keybindings
+link regardless.
 
 ## Secrets
 

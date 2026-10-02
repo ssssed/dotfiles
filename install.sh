@@ -52,4 +52,7 @@ if [ ! -f "$HOME/.zsh_secrets" ]; then
   echo "created $HOME/.zsh_secrets from template -- fill in real API keys"
 fi
 
+echo "== vscode =="
+"$DOTFILES/install-vscode.sh"
+
 echo "done. Backups (if any): $BACKUP_DIR"

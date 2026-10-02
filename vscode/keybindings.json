@@ -1,0 +1,51 @@
+[
+	{
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "shift+a",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "tab",
+		"command": "workbench.action.nextEditor",
+		"when": "vim.active && vim.mode == 'Normal' && editorTextFocus && !suggestWidgetVisible && !renameInputVisible && !inSnippetMode && !parameterHintsVisible"
+	},
+	{
+		"key": "shift+tab",
+		"command": "workbench.action.previousEditor",
+		"when": "vim.active && vim.mode == 'Normal' && editorTextFocus && !suggestWidgetVisible && !renameInputVisible && !inSnippetMode && !parameterHintsVisible"
+	},
+	{
+		"key": "f2",
+		"command": "editor.action.rename"
+	},
+	{
+		"key": "g r",
+		"command": "editor.action.rename",
+		"when": "!filesExplorerFocus && !inputFocus && vim.active && vim.mode == 'Normal'"
+	},
+	{
+		"key": "; ;",
+		"command": "workbench.files.action.focusFilesExplorer",
+		"when": "vim.mode == 'Normal' && !filesExplorerFocus"
+	},
+	{
+		"key": "; ;",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "vim.mode == 'Normal' && filesExplorerFocus"
+	},
+	{
+		"key": "r",
+		"command": "renameFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "enter",
+		"command": "list.select",
+		"when": "filesExplorerFocus && !inputFocus && vim.mode == 'Normal'"
+	}
+]

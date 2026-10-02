@@ -1,0 +1,52 @@
+{
+  "Function": {
+    "prefix": "fu",
+    "body": ["function ${1:name}() {}"],
+    "description": "Создает функцию"
+  },
+  "Async Function": {
+    "prefix": "afu",
+    "body": ["async function ${1:name}() {}"],
+    "description": "Создает асинхронную функцию"
+  },
+  "Arrow Function": {
+    "prefix": "af",
+    "body": ["const ${1:name} = () => {}"],
+    "description": "Создает стрелочную функцию"
+  },
+  "Async Arrow Function": {
+    "prefix": "asf",
+    "body": ["const ${1:name} = async () => {}"],
+    "description": "Создает асинхронную стрелочную функцию"
+  },
+  "Export Arrow Function": {
+    "prefix": "eaf",
+    "body": ["export const ${1:name} = () => {}"],
+    "description": "Создает экспортируемую стрелочную функцию"
+  },
+  "Export Function": {
+    "prefix": "efu",
+    "body": ["export function ${1:name}() {}"],
+    "description": "Создает экспортируемую функцию"
+  },
+  "Export Async Function": {
+    "prefix": "eafu",
+    "body": ["export async function ${1:name}() {}"],
+    "description": "Создает экспортируемую асинхронную функцию"
+  },
+  "Export Async Arrow Function": {
+    "prefix": "easf",
+    "body": ["export const ${1:name} = async () => {}"],
+    "description": "Создает экспортируемую асинхронную стрелочную функцию"
+  },
+	"Import Module Styles": {
+    "prefix": "impm",
+    "body": ["import s from './${1:styles}';"],
+    "description": "Импортирует модульные стили стили"
+  },
+  "Export Module": {
+    "prefix": "expm",
+    "body": ["export { ${2:ModuleName} } from '${1:module}';"],
+    "description": "Экспортирует указанный модуль"
+  }
+}

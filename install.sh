@@ -22,6 +22,13 @@ link() {
 echo "== git submodules =="
 git -C "$DOTFILES" submodule update --init --recursive
 
+echo "== homebrew =="
+if command -v brew >/dev/null 2>&1; then
+  brew bundle install --file="$DOTFILES/Brewfile"
+else
+  echo "brew not found, skipping Brewfile (install Homebrew first: https://brew.sh)" >&2
+fi
+
 echo "== oh-my-zsh =="
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -20,6 +20,7 @@ Personal config for zsh/oh-my-zsh, git, tmux, kitty, nvim, Claude Code.
 | `vscode/keybindings.json`| VSCode User `keybindings.json` |
 | `vscode/snippets`        | VSCode User `snippets/`        |
 | `vscode/extensions.txt`  | installed via `code --install-extension` |
+| `Brewfile`               | `brew bundle install` (formulae, casks, global npm packages) |
 
 ## Install on a new machine
 
@@ -31,6 +32,7 @@ cd ~/dotfiles
 
 `install.sh`:
 - inits submodules
+- runs `brew bundle install` from `Brewfile` (formulae, casks, global npm packages) if `brew` is present
 - installs oh-my-zsh if missing, plus `zsh-syntax-highlighting` / `zsh-autosuggestions`
 - symlinks every file above into place, backing up any existing real file under `~/.dotfiles-backup/<timestamp>/`
 - creates `~/.zsh_secrets` from the example template if missing
